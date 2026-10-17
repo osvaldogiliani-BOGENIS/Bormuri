@@ -1,0 +1,20 @@
+quantita,componente,note,euro
+1,Raspberry Pi Camera Module 3 + flat Pi 5 50cm-1m,occhio Borg,35
+1,Microfono USB mini con capsula separata,punta antenna Borg,15
+1,OLED 0.91in 128x32 SSD1306 I2C bianco,bocca,4
+1,Speaker full-range 50mm 4ohm 3-5W,petto,10
+1,Amplificatore I2S MAX98357A,3W a 5V,6
+1,Striscia WS2812B 60 LED/m 1m,barre base,10
+1,WS2812B singoli su PCB (pacco 50),pulsantiere e antenne,10
+1,Filo di luci rame 5V 2-3m,lato Borg,8
+1,Raspberry Pi 5 8GB + Active Cooler,cervello,110
+1,microSD 64GB A2,sistema,12
+1,Alimentatore Pi 27W USB-C,,14
+1,Raspberry Pi Pico 2,coprocessore luci e ventola,6
+2,74AHCT125,livello 3.3->5V,3
+1,MOSFET AO3400,filo di luci,3
+1,Noctua NF-A8 5V PWM,retro base,20
+1,Alimentatore 5V 10A con jack,LED audio ventola,25
+1,Connettore GX16 8 poli + cavi fusibile interruttore,,20
+1,Pulsante momentaneo piccolo,push-to-talk,2
+1,Anker MagGo Wireless Charger Stand A25X1 bianco,gia acquistato; alimentatore >=25W esterno,0
