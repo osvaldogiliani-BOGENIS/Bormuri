@@ -1,0 +1,16 @@
+[Unit]
+Description=Bormuri, busto animatronico
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/bormuri
+EnvironmentFile=/etc/bormuri.env
+ExecStart=/home/pi/bormuri/.venv/bin/python -m bormuri
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

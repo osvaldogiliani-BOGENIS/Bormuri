@@ -1,0 +1,19 @@
+quantita,componente,note
+1,Arducam 12MP IMX708 USB UVC,occhio; webcam del PC
+1,Microfono USB mini con capsula separata,punta antenna Borg
+1,Pimoroni Plasma 2350,bocca luci pulsante; nessuna saldatura
+1,OLED 0.91in 128x32 SSD1306 con presa Qwiic/STEMMA QT,bocca
+2,SparkFun QwiicBus EndPoint + cavo RJ45 corto + accoppiatore,I2C lungo nel collo
+1,Sensore temperatura Qwiic TMP117,base
+1,SparkFun Qwiic Button,pulsante nascosto
+3,Stringa pixel WS2811 12mm da 50 con JST,base pulsanti testa
+1,Filo di luci WS2812 5V con JST,lato Borg in fondo alla catena
+1,Scheda audio USB con jack 3.5,altoparlante del PC
+1,Amplificatore PAM8403 montato con jack e morsetti,alimentato da USB
+1,Speaker 50mm 4ohm 3W con cavetti,petto
+1,Noctua NF-A8 5V PWM con cavo USB,retro base; velocita fissa
+1,Hub USB 2.0 7 porte alimentato a jack 5V,base
+2,Prolunga USB-C da pannello con viti,piastra PC e ANKER
+1,Alimentatore 5V 10A 5.5x2.5 + presa jack cablata + interruttore + portafusibili,
+6,Wago 221-415,distribuzione 5V
+1,Anker MagGo Wireless Charger Stand A25X1 bianco,gia acquistato

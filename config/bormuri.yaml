@@ -1,0 +1,49 @@
+# Configurazione di Bormuri. Le chiavi segrete NON vanno qui: si leggono da env.
+
+audio:
+  input_device: null          # null = predefinito ALSA; altrimenti nome/indice del mic USB
+  output_device: null         # null = predefinito (MAX98357A dopo l'overlay)
+  sample_rate: 16000          # mic e STT
+  output_sample_rate: 22050   # Piper medium
+  volume: 0.8                 # 0..1, applicato in software
+  output_latency_ms: 60       # ritardo dal buffer allo speaker, compensato dalla bocca
+
+wakeword:
+  model: models/ehi_bormuri.onnx   # modello openWakeWord addestrato su "Ehi Bormuri"
+  threshold: 0.5
+
+stt:
+  model: small                # faster-whisper: tiny/base/small
+  language: it
+  silence_ms: 900             # fine frase dopo questo silenzio
+  max_seconds: 15
+
+tts:
+  voice: models/it_IT-paola-medium.onnx   # oppure it_IT-riccardo-x_low
+  borg_effect: 0.35           # 0 = voce pulita, 1 = tutta robotica
+
+llm:
+  model: claude-haiku-5-5     # veloce per le risposte a voce
+  max_tokens: 300
+  history_turns: 6            # memoria breve della conversazione
+  persona_file: config/persona.md
+
+mouth:                        # OLED nella testa, disegnato dalla Plasma 2350
+  width: 128
+  height: 32
+  fps: 30
+  gain: 3.0                   # amplificazione visiva della forma d'onda
+
+camera:
+  enabled: true
+  resolution: [640, 480]
+  presence_interval_s: 0.5
+  greet_cooldown_s: 120       # non salutare la stessa scena di continuo
+
+lights:
+  serial_port: null           # null = trova da sola la Plasma 2350; altrimenti COM3, /dev/ttyACM0...
+  baudrate: 115200
+  max_brightness: 0.40        # limite software (≈3 A sui ~130 LED)
+
+# Ventola: velocità fissa dalla porta USB dell'hub, niente da configurare.
+# Pulsante nascosto: SparkFun Qwiic Button sulla Plasma (breve = parla, 2 s = muto).
