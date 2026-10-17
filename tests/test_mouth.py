@@ -1,25 +1,31 @@
 import numpy as np
 
 from bormuri.audio.playback import AudioTap, rms_level
-from bormuri.display.mouth import render_waveform
+from bormuri.display.mouth import mouth_columns, render_columns
 
 
-def test_silence_draws_rest_line():
-    img = render_waveform(None)
+def test_silence_is_rest_line():
+    assert mouth_columns(None) is None
+    img = render_columns(None)
     assert img.shape == (32, 128)
-    assert img.sum() == 128
-    assert img[16].all() or img[15].all()
+    assert img.sum() == 128 and img[16].all()
 
 
 def test_loud_sine_fills_full_height():
     t = np.arange(1024) / 22050
-    img = render_waveform(np.sin(2 * np.pi * 440 * t).astype(np.float32), gain=3.0)
-    assert img[0].any() and img[-1].any()
+    cols = mouth_columns(np.sin(2 * np.pi * 440 * t).astype(np.float32), gain=3.0)
+    assert len(cols) == 128 and max(cols) == 15
+    img = render_columns(cols)
+    assert img[1].any() and img[31].any()
 
 
 def test_quiet_signal_stays_near_middle():
-    img = render_waveform(np.full(1024, 0.01, dtype=np.float32), gain=1.0)
-    assert not img[0].any() and not img[-1].any()
+    cols = mouth_columns(np.full(1024, 0.01, dtype=np.float32), gain=1.0)
+    assert max(cols) == 0
+
+
+def test_short_window_is_padded():
+    assert len(mouth_columns(np.ones(10, dtype=np.float32))) == 128
 
 
 def test_tap_compensates_output_latency():

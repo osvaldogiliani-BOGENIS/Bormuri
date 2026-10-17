@@ -21,8 +21,7 @@ class Bormuri:
         from bormuri.audio.wakeword import WakeWord
         from bormuri.brain.llm import Brain
         from bormuri.display.mouth import Mouth
-        from bormuri.lights.link import PicoLink
-        from bormuri.lights.scenes import FanController
+        from bormuri.lights.link import PlasmaLink
 
         self.cfg = cfg
         self.state = State.RIPOSO
@@ -32,16 +31,15 @@ class Bormuri:
         self.brain = Brain(cfg.llm)
         self.voice = Voice(cfg.tts)
         self.player = Player(cfg.audio)
-        self.mouth = Mouth.from_config(cfg.mouth, self.player.tap)
-        self.pico = PicoLink(cfg.lights)
-        self.fan = FanController(cfg.fan, self.pico)
+        self.plasma = PlasmaLink(cfg.lights)
+        self.mouth = Mouth.from_config(cfg.mouth, self.player.tap, self.plasma)
         self.button_pressed = asyncio.Event()
 
     async def set_state(self, state: State) -> None:
         if state != self.state:
             log.info("stato %s -> %s", self.state.value, state.value)
         self.state = state
-        self.pico.send_state(state)
+        self.plasma.send_state(state)
 
     async def converse(self, text: str | None = None) -> None:
         """Un giro completo: ascolta (se serve), pensa, parla."""
@@ -60,17 +58,27 @@ class Bormuri:
 
         samples, rate = await asyncio.to_thread(self.voice.synthesize, reply)
         await self.set_state(State.PARLA)
-        await self.player.play(samples, rate, on_level=self.pico.send_level)
+        await self.player.play(samples, rate, on_level=self.plasma.send_level)
         await self.set_state(State.RIPOSO)
 
     def toggle_mute(self) -> None:
         muted = self.state == State.MUTO
         asyncio.ensure_future(self.set_state(State.RIPOSO if muted else State.MUTO))
 
-    async def listen_loop(self) -> None:
-        from bormuri import button
+    async def plasma_loop(self) -> None:
+        """Pulsante nascosto e temperatura arrivano dalla Plasma."""
+        async for event in self.plasma.events():
+            if event == "BTN CORTO":
+                self.button_pressed.set()
+            elif event == "BTN LUNGO":
+                self.toggle_mute()
+            elif event.startswith("T "):
+                log.debug("temperatura base %s °C", event[2:])
+            elif event.startswith("CIAO"):
+                log.info("plasma: %s", event)
+                await self.set_state(self.state)  # riallinea le luci dopo un riavvio
 
-        self._button = button.attach(self.cfg.button, self.button_pressed.set, self.toggle_mute)
+    async def listen_loop(self) -> None:
         async for _ in self.wake.detections(self.mic, self.button_pressed):
             if self.state == State.RIPOSO:
                 await self.converse()
@@ -89,7 +97,8 @@ class Bormuri:
         await self.set_state(State.RIPOSO)
         await asyncio.gather(
             self.mouth.run(),
-            self.fan.run(),
+            self.plasma.heartbeat(),
+            self.plasma_loop(),
             self.listen_loop(),
             self.presence_loop(),
         )

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bormuri"
 version = "0.1.0"
-description = "Busto animatronico Bormuri: Raspberry Pi 5 + Pico 2"
+description = "Busto animatronico Bormuri: programma e firmware della Plasma 2350"
 requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.24",
@@ -16,9 +16,7 @@ dependencies = [
 # Tutto quello che serve sul Raspberry Pi 5. picamera2 e opencv arrivano da apt.
 pi = [
     "sounddevice>=0.4",
-    "luma.oled>=3.13",
     "pyserial>=3.5",
-    "gpiozero>=2.0",
     "openwakeword>=0.6",
     "faster-whisper>=1.0",
     "piper-tts>=1.2",

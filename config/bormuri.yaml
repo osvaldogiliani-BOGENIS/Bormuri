@@ -28,14 +28,11 @@ llm:
   history_turns: 6            # memoria breve della conversazione
   persona_file: config/persona.md
 
-mouth:
-  i2c_port: 1
-  i2c_address: 0x3C
+mouth:                        # OLED nella testa, disegnato dalla Plasma 2350
   width: 128
   height: 32
-  fps: 45
+  fps: 30
   gain: 3.0                   # amplificazione visiva della forma d'onda
-  rotate: 0                   # 0..3, se l'OLED è montato capovolto
 
 camera:
   enabled: true
@@ -44,16 +41,9 @@ camera:
   greet_cooldown_s: 120       # non salutare la stessa scena di continuo
 
 lights:
-  serial_port: /dev/ttyACM0   # Pico 2 via USB
+  serial_port: null           # null = trova da sola la Plasma 2350; altrimenti COM3, /dev/ttyACM0...
   baudrate: 115200
   max_brightness: 0.40        # limite software (≈3 A sui ~130 LED)
 
-fan:
-  min_percent: 20
-  max_percent: 100
-  temp_low_c: 50              # sotto: minimo
-  temp_high_c: 75             # sopra: massimo
-
-button:
-  gpio: 17                    # push-to-talk / muto, pull-up
-  long_press_s: 2.0           # pressione lunga = muto on/off
+# Ventola: velocità fissa dalla porta USB dell'hub, niente da configurare.
+# Pulsante nascosto: SparkFun Qwiic Button sulla Plasma (breve = parla, 2 s = muto).

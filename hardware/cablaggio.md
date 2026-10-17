@@ -1,48 +1,47 @@
 # Cablaggio Bormuri
 
-Riassunto operativo della sezione 3 del piano di costruzione
-(`piano-costruzione-bormuri.md`, che resta la fonte).
+Versione senza saldature con la Pimoroni Plasma 2350. Fonte:
+`bormuri/scheletro/distinta-e-montaggio.md` (sezione 4) nei file del progetto.
 
-## Raspberry Pi 5
-
-| Funzione | GPIO | Pin fisico | Note |
-|---|---|---|---|
-| OLED SDA | GPIO2 | 3 | I2C1 a 1 MHz |
-| OLED SCL | GPIO3 | 5 | |
-| OLED VCC | 3,3 V | 1 | GND su pin 6 |
-| I2S BCLK → MAX98357A | GPIO18 | 12 | |
-| I2S LRCLK | GPIO19 | 35 | |
-| I2S DIN | GPIO21 | 40 | MAX98357A VIN dal 5 V 10 A |
-| Pulsante push-to-talk | GPIO17 | 11 | pull-up interno, altro capo a GND |
-| Pi Camera Module 3 | CSI | CAM/DISP 0 | flat Pi 5 da 50 cm–1 m |
-| Microfono mini | USB | | nella punta dell'antenna Borg |
-| Pico 2 | USB | | `/dev/ttyACM0` |
-
-`/boot/firmware/config.txt`:
+## Schema
 
 ```
-dtparam=i2c_arm=on,i2c_arm_baudrate=1000000
-dtoverlay=max98357a
+ PC ══ USB ══ piastra retro ══ hub USB 7 porte (jack 5 V)
+                                 ├─ camera occhio (prolunga USB al collo)
+                                 ├─ microfono antenna (prolunga USB al collo)
+                                 ├─ scheda audio ── jack 3,5 ── PAM8403 ── speaker petto
+                                 ├─ alimentazione PAM8403 (USB)
+                                 ├─ ventola Noctua (USB, velocità fissa)
+                                 └─ Plasma 2350 (USB-C)
+                                       ├─ morsetti LED ── pixel base ─► pulsanti ─► (JST al collo) ─► testa ─► filo di luci Borg
+                                       └─ Qw/ST ── TMP117 ── Qwiic Button ── QwiicBus ══ RJ45 al collo ══ QwiicBus ── OLED bocca
 ```
 
-## Raspberry Pi Pico 2
+## Plasma 2350
 
-| Funzione | Pin | Tramite |
+| Funzione | Pin | Note |
 |---|---|---|
-| Catena LED base (~130 px) | GP2 | 74AHCT125, 330 Ω in serie, 1000 µF all'ingresso |
-| Catena LED testa (3–6 px) | GP3 | 74AHCT125, 330 Ω in serie |
-| Filo di luci lato Borg | GP15 PWM | MOSFET AO3400 lato basso |
-| Ventola NF-A8 5V PWM | GP16 PWM 25 kHz | transistor open-drain (logica invertita nel firmware) |
+| Dati catena LED | GP15, morsetto DA | già traslato a 5 V sulla scheda |
+| 5 V e GND catena LED | morsetti +5V e GND | dal Wago, fusibile 5 A, 1000 µF all'inizio |
+| I2C Qw/ST | GP20 SDA, GP21 SCL | 400 kHz; 100 kHz se il cavo del collo dà errori |
+| LED di stato | GP16/17/18 | verde = PC collegato, blu = da sola |
+
+Indirizzi I2C: OLED 0x3C, TMP117 0x48, Qwiic Button 0x6F.
+
+**Da verificare sulla scheda vera**: i numeri dei pin (presi dal pinout della
+Plasma 2040, stesso schema), il conteggio dei pixel per tratto e l'ordine dei
+colori, tutti in testa a `firmware/plasma/src/main.cpp`.
+
+## Catena LED (un solo filo dati)
+
+| Tratto | Pixel | Costante nel firmware |
+|---|---|---|
+| Base (barre e pulsantiere) | ~130 | `NUM_BASE` |
+| Testa (antenna, parabola) | 3–6 | `NUM_HEAD` |
+| Filo di luci lato Borg | in fondo alla catena | `NUM_STRING` |
 
 ## Alimentazione
 
-- Pi 5: alimentatore ufficiale 27 W USB-C.
-- LED, filo di luci, MAX98357A, ventola: 5 V 10 A con jack, fusibile 5 A sulla linea LED.
-- Masse in comune fra Pi, Pico e 5 V.
-- Il caricatore Anker resta indipendente: solo il suo cavo USB-C attraversa la base,
-  l'alimentatore ≥25 W sta fuori.
-
-## Connettore al collo
-
-GX16 8 poli (LED testa, filo di luci, OLED I2C, 5 V, GND) più passaggio separato
-per il flat della camera e il cavo del microfono, dentro la colonna trasparente.
+- 5 V 10 A esterno → interruttore → fusibile 10 A → Wago: hub (jack), Plasma/LED (fusibile 5 A).
+- Bilancio: ~4,6 A con i LED al 40%.
+- Il caricatore Anker resta indipendente: prolunga USB-C "full featured" dalla piastra.
