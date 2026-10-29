@@ -1,0 +1,794 @@
+[
+ {
+  "g": "base",
+  "n": "base_anello.stl",
+  "ext": [
+   381.5,
+   381.8,
+   90.3
+  ],
+  "vol_cm3": 494.7,
+  "faces": 1675364,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": false,
+   "Weerg MJF PA12": false,
+   "Weerg FDM": false,
+   "Weerg MSLA": false
+  },
+  "mb": 83.8
+ },
+ {
+  "g": "base",
+  "n": "base_ripiano.stl",
+  "ext": [
+   341.5,
+   341.5,
+   15.8
+  ],
+  "vol_cm3": 422.9,
+  "faces": 390976,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": false,
+   "Weerg MSLA": false
+  },
+  "mb": 19.5
+ },
+ {
+  "g": "busto",
+  "n": "antenna_borg.stl",
+  "ext": [
+   85.3,
+   88.1,
+   70.1
+  ],
+  "vol_cm3": 15.3,
+  "faces": 11122,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 0.6
+ },
+ {
+  "g": "busto",
+  "n": "antenna_org.stl",
+  "ext": [
+   90.8,
+   86.0,
+   64.2
+  ],
+  "vol_cm3": 14.2,
+  "faces": 11172,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 0.6
+ },
+ {
+  "g": "busto",
+  "n": "braccio_borg_avambraccio_1.stl",
+  "ext": [
+   148.7,
+   148.2,
+   97.1
+  ],
+  "vol_cm3": 139.0,
+  "faces": 381510,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 19.1
+ },
+ {
+  "g": "busto",
+  "n": "braccio_borg_avambraccio_2.stl",
+  "ext": [
+   131.0,
+   141.5,
+   91.5
+  ],
+  "vol_cm3": 102.6,
+  "faces": 435690,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 21.8
+ },
+ {
+  "g": "busto",
+  "n": "braccio_borg_mano.stl",
+  "ext": [
+   165.1,
+   172.5,
+   100.9
+  ],
+  "vol_cm3": 120.0,
+  "faces": 382656,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 19.1
+ },
+ {
+  "g": "busto",
+  "n": "braccio_borg_spalla.stl",
+  "ext": [
+   137.6,
+   237.9,
+   216.2
+  ],
+  "vol_cm3": 244.6,
+  "faces": 856812,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 42.8
+ },
+ {
+  "g": "busto",
+  "n": "braccio_org_avambraccio.stl",
+  "ext": [
+   105.7,
+   145.9,
+   201.2
+  ],
+  "vol_cm3": 122.8,
+  "faces": 342424,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 17.1
+ },
+ {
+  "g": "busto",
+  "n": "braccio_org_mano.stl",
+  "ext": [
+   132.2,
+   77.9,
+   192.9
+  ],
+  "vol_cm3": 110.8,
+  "faces": 687106,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 34.4
+ },
+ {
+  "g": "busto",
+  "n": "braccio_org_omero.stl",
+  "ext": [
+   133.9,
+   130.5,
+   137.6
+  ],
+  "vol_cm3": 94.7,
+  "faces": 760124,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 38.0
+ },
+ {
+  "g": "busto",
+  "n": "braccio_org_spalla.stl",
+  "ext": [
+   102.8,
+   233.3,
+   213.5
+  ],
+  "vol_cm3": 136.8,
+  "faces": 543766,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 27.2
+ },
+ {
+  "g": "busto",
+  "n": "busto_davanti.stl",
+  "ext": [
+   356.3,
+   175.8,
+   369.8
+  ],
+  "vol_cm3": 689.6,
+  "faces": 1724356,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": false,
+   "Weerg MSLA": false
+  },
+  "mb": 86.2
+ },
+ {
+  "g": "busto",
+  "n": "busto_dietro.stl",
+  "ext": [
+   356.2,
+   160.6,
+   373.9
+  ],
+  "vol_cm3": 1088.3,
+  "faces": 1630306,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": false,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": false,
+   "Weerg MSLA": false
+  },
+  "mb": 81.5
+ },
+ {
+  "g": "busto",
+  "n": "sportello.stl",
+  "ext": [
+   170.0,
+   100.0,
+   210.0
+  ],
+  "vol_cm3": 339.7,
+  "faces": 639886,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 32.0
+ },
+ {
+  "g": "busto",
+  "n": "testa_calotta.stl",
+  "ext": [
+   211.2,
+   125.8,
+   193.7
+  ],
+  "vol_cm3": 240.4,
+  "faces": 498542,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 24.9
+ },
+ {
+  "g": "busto",
+  "n": "testa_maschera.stl",
+  "ext": [
+   204.3,
+   119.9,
+   206.7
+  ],
+  "vol_cm3": 229.6,
+  "faces": 674556,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 33.7
+ },
+ {
+  "g": "interni",
+  "n": "cassa_speaker.stl",
+  "ext": [
+   56.0,
+   92.4,
+   67.0
+  ],
+  "vol_cm3": 58.0,
+  "faces": 33184,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 1.7
+ },
+ {
+  "g": "interni",
+  "n": "cornice_oled.stl",
+  "ext": [
+   46.0,
+   65.0,
+   22.0
+  ],
+  "vol_cm3": 47.2,
+  "faces": 29964,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 1.5
+ },
+ {
+  "g": "interni",
+  "n": "cornice_ventola.stl",
+  "ext": [
+   81.0,
+   72.3,
+   71.0
+  ],
+  "vol_cm3": 30.0,
+  "faces": 8102,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 0.4
+ },
+ {
+  "g": "interni",
+  "n": "flangia_ripiano.stl",
+  "ext": [
+   110.0,
+   110.0,
+   20.0
+  ],
+  "vol_cm3": 43.5,
+  "faces": 1864,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 0.1
+ },
+ {
+  "g": "interni",
+  "n": "gomito_borg.stl",
+  "ext": [
+   48.0,
+   48.7,
+   36.3
+  ],
+  "vol_cm3": 15.9,
+  "faces": 41752,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 2.1
+ },
+ {
+  "g": "interni",
+  "n": "gomito_organico.stl",
+  "ext": [
+   31.8,
+   45.1,
+   42.5
+  ],
+  "vol_cm3": 16.7,
+  "faces": 43108,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 2.2
+ },
+ {
+  "g": "interni",
+  "n": "pannello_speaker.stl",
+  "ext": [
+   56.0,
+   20.2,
+   54.7
+  ],
+  "vol_cm3": 6.1,
+  "faces": 856,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 0.0
+ },
+ {
+  "g": "interni",
+  "n": "piastra_connettori.stl",
+  "ext": [
+   108.0,
+   51.4,
+   18.8
+  ],
+  "vol_cm3": 48.3,
+  "faces": 38306,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 1.9
+ },
+ {
+  "g": "interni",
+  "n": "spalla_borg.stl",
+  "ext": [
+   82.5,
+   32.8,
+   37.4
+  ],
+  "vol_cm3": 44.2,
+  "faces": 521534,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 26.1
+ },
+ {
+  "g": "interni",
+  "n": "spalla_organica.stl",
+  "ext": [
+   79.0,
+   57.6,
+   56.7
+  ],
+  "vol_cm3": 60.6,
+  "faces": 32106,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 1.6
+ },
+ {
+  "g": "interni",
+  "n": "staffa_base_faccia0.stl",
+  "ext": [
+   70.2,
+   53.0,
+   26.0
+  ],
+  "vol_cm3": 14.2,
+  "faces": 34434,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 1.7
+ },
+ {
+  "g": "interni",
+  "n": "staffa_base_faccia1.stl",
+  "ext": [
+   44.5,
+   42.8,
+   41.7
+  ],
+  "vol_cm3": 9.9,
+  "faces": 110156,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 5.5
+ },
+ {
+  "g": "interni",
+  "n": "staffa_base_faccia4.stl",
+  "ext": [
+   73.2,
+   53.0,
+   26.2
+  ],
+  "vol_cm3": 14.2,
+  "faces": 60082,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 3.0
+ },
+ {
+  "g": "interni",
+  "n": "staffa_base_faccia5.stl",
+  "ext": [
+   43.3,
+   47.9,
+   41.7
+  ],
+  "vol_cm3": 9.4,
+  "faces": 110188,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 5.5
+ },
+ {
+  "g": "interni",
+  "n": "staffa_base_faccia6.stl",
+  "ext": [
+   66.0,
+   53.0,
+   26.0
+  ],
+  "vol_cm3": 13.4,
+  "faces": 69280,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 3.5
+ },
+ {
+  "g": "interni",
+  "n": "staffa_base_faccia7.stl",
+  "ext": [
+   39.8,
+   47.9,
+   41.7
+  ],
+  "vol_cm3": 9.6,
+  "faces": 117138,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 5.9
+ },
+ {
+  "g": "interni",
+  "n": "staffa_testa.stl",
+  "ext": [
+   92.0,
+   57.0,
+   97.0
+  ],
+  "vol_cm3": 68.3,
+  "faces": 10576,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 0.5
+ },
+ {
+  "g": "interni",
+  "n": "supporto_brio.stl",
+  "ext": [
+   35.6,
+   12.7,
+   38.0
+  ],
+  "vol_cm3": 5.2,
+  "faces": 228,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 0.0
+ },
+ {
+  "g": "interni",
+  "n": "vassoio_elettronica.stl",
+  "ext": [
+   180.0,
+   124.0,
+   14.0
+  ],
+  "vol_cm3": 79.2,
+  "faces": 28062,
+  "wt": true,
+  "bodies": 1,
+  "fit": {
+   "JLC SLA 9600/Black/8001": true,
+   "JLC SLA 8228/Grey": true,
+   "JLC MJF PA12": true,
+   "Weerg MJF PA12": true,
+   "Weerg FDM": true,
+   "Weerg MSLA": true
+  },
+  "mb": 1.4
+ }
+]

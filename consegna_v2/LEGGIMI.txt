@@ -1,0 +1,54 @@
+BORMURI - FILE DI STAMPA (versione 29/10/2026, per servizio di stampa professionale)
+
+CONTENUTO
+- guscio/busto/   13 STL: busto davanti, busto dietro, sportello, testa calotta, testa maschera,
+                  antenne Borg e organica, braccio Borg (spalla, avambraccio 1, avambraccio 2, mano),
+                  braccio organico (spalla, omero, avambraccio, mano)
+- guscio/base/     2 STL: anello base (8 pareti in un pezzo), ripiano (un pezzo)
+- interni/        19 STL: staffe, vassoio, supporti, cornici, cassa speaker, spalle, gomiti
+- taglio_laser/   fondo della base (DXF, SVG, PDF quotato)
+Una copia di ogni file. Coordinate in mm. Nello slicer/sito del servizio non scalare i pezzi.
+
+CONTROLLI FATTI SU OGNI PEZZO
+- Spessore: nessun punto sotto 1,2 mm (prova a sfera Ø1,2 su griglia 0,1 mm), 36 pezzi su 36.
+- File chiusi: ogni STL e' stagno e fatto di un solo corpo.
+- Peso file: ogni STL e' sotto 90 MB (limite di caricamento 100 MB). Busto davanti, busto dietro e anello base
+  sono alleggeriti con scarto massimo 0,025 mm dalla forma: invisibile in stampa.
+- Fori aperti (prova a raggi): lente Brio, fessura bocca OLED, 121/121 fori speaker, 5 pixel LED,
+  6 prese/connettori, 9 fori cavi del ripiano, 6 fori filo luci Ø9,4, feritoie ventola (piu' aperte di prima).
+  Foro luce R2 petto: aperto, ma la sporgenza davanti copre l'asse: il tubo entra un po' inclinato.
+- Struttura interna: nessun pezzo tocca telaio, staffe, piastre o cavi; la struttura resta valida, nessuna modifica.
+  Distanze minime dove il guscio e' stato ispessito: piastra connettori 0,5 mm (prima 1,3),
+  staffa base faccia 4 1,5 mm (prima 2,3), cavi 1,6 mm (flessibili). Busto e braccia: oltre 2 mm, invariato.
+- Forma esterna: punte e alette sottili ispessite di pochi mm in punti piccoli (in tutto circa 1,5% della superficie del guscio).
+- Sportello: resta nel suo contorno originale (170 x 100 x 210 mm), si incastra come prima.
+
+PEZZI UNITI (prima 33 pezzi di guscio, ora 17)
+- Busto davanti = 4 pezzi di prima (alto/basso, Borg/organico). Busto dietro = 4 pezzi di prima.
+- Anello base = le 8 pareti. Ripiano = i 4 quarti.
+- Testa, braccia, antenne e sportello restano separati: si chiudono attorno allo scheletro.
+- Giuntura busto davanti/dietro: restano i perni stampati e la colla, come prima.
+- Ferramenta Motedis: tutta M4 (dadi a T Nut 5 M4, viti M4, rondelle M4), vedi struttura_e_minuteria.
+
+MONTAGGIO DELLA BASE CON L'ANELLO IN UN PEZZO
+1. Anello capovolto sul tavolo.
+2. Telaio in alluminio (senza albero) infilato dal basso: passa con 3,8 mm di margine.
+3. Fondo laser avvitato da sotto (viti M4 con rondella M4 Ø9), poi si gira tutto.
+4. Staffe, cornice ventola, piastra connettori e pixel si montano da dentro.
+5. Il ripiano (disco) va infilato sull'albero prima della barra spalle e della staffa testa.
+
+GIUNTURE
+Lungo alcune giunture (busto davanti/dietro, bordo sotto il ripiano, polsi e spalle) le punte
+sottili sotto 1,2 mm sono state rifilate: possono restare fessure sotto 1 mm.
+Si chiudono con lo stucco al momento dell'incollaggio, prima del primer.
+
+IMPOSTAZIONI CONSIGLIATE
+Guscio (busto, testa, braccia, antenne, sportello, base, ripiano):
+- JLC3DP: SLA resina 9600 (bianca) oppure 8001 / Black; finitura standard levigata.
+  Unico servizio dove entra l'anello base in un pezzo (382 x 382 x 90 mm).
+- Weerg: MJF PA12 grigio, finitura standard (tutto tranne l'anello base, troppo largo per MJF).
+- Superficie da verniciare: primer spray (grigio o nero) prima dei colori Citadel.
+Parti interne (staffe, vassoio, cornici, cassa speaker, spalle, gomiti):
+- JLC3DP o Weerg: MJF PA12 nero (o grigio), finitura standard. Resistente: viti da 3 mm nei fori pilota, viti M4 con rondella nei fori Ø5,5.
+- In alternativa resina SLA 8228 / Grey su JLC3DP.
+Su tutti: 1 copia per file, unita' mm, nessuna scala, nessun supporto da togliere a mano richiesto.
